@@ -1,17 +1,10 @@
-add_executable(opentorque
-    main.c
-    foc.c
-    pwm.c
-    adc.c
-    encoder.c
-)
+add_executable(opentorque main.c)
 
 target_link_libraries(opentorque
     pico_stdlib
     hardware_pwm
     hardware_adc
     hardware_i2c
-    hardware_spi
 )
 
 pico_add_extra_outputs(opentorque)
